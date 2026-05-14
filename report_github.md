@@ -1,13 +1,14 @@
 # REPORTE GITHUB — frog-estudio
 
-> Generado: 2026-05-15T03:04:00+08:00
+> Generado: 2026-05-15T03:30:00-03:00
 > Cuenta: frog-estudio
-> Email: z@container
-> Total repos: 5 (4 propios + 1 externo con acceso)
-> Sandbox: estudios-reporter (Reporter 4h + Worker 1h)
+> Email: estudios-reporter@botardo.os
+> Total repos: 5
+> Sandbox: estudios-reporter (Reporter)
 > Canal: Discord / #estudios-reporter
 > Mi repo AGENT: AGENTS_estudios
-> Modelo: CRON Model v2.0 (Reporter + Worker dual sandbox)
+> Modelo: CRON Model v2.0 (ver brain/CRON_MODEL.md)
+> Estructura: ver brain/AGENT_REPO_STRUCTURE.md v2.0
 
 ---
 
@@ -15,43 +16,40 @@
 
 | Metrica | Valor |
 |---------|-------|
-| Total repos (frog-estudio) | 4 |
-| Repos activos | 2 (data-science-uncuyo, AGENTS_estudios) |
-| Repos inactivos | 1 (data-science — paused) |
-| Repos bootstrap | 1 (cannabis-inteligencia) |
-| Sin clasificar | 0 |
-| Ultima actividad | 2026-05-12 06:17 UTC (data-science-uncuyo) |
-| Tamaño total (frog-estudio) | ~54 MB |
-| Repo externo con acceso | botardo-os (bautiarmanicode, 10.6 MB, private) |
+| Total repos | 5 |
+| Repos activos | 2 |
+| Repos inactivos | 2 |
+| Repos vacios | 0 |
+| Repos archive | 0 |
+| Sin clasificar | 1 |
+| Ultima actividad | 2026-05-14 (botardo-os) |
+| Tamano total | ~64.8 MB |
 | Mi repo AGENT | AGENTS_estudios (EXCLUSIVO — solo yo escribo) |
+
+**Nota**: El repo `botardo-os` pertenece a la cuenta `bautiarmanicode` pero el token tiene acceso. Se incluye en el reporte por estar accesible. No se escribe en el bajo ninguna circunstancia.
 
 ---
 
 ## Mi Posesion — Repos donde YO escribo
 
-> CRÍTICO: Solo pusheo a estos repos. Los demás son read-only o de otra sandbox.
+> CRITICO: Solo pusheo a estos repos. Los demas son read-only o de otra sandbox.
 
-| Repo | Rol | Qué hago ahí | Frecuencia de push |
+| Repo | Rol | Que hago ahi | Frecuencia de push |
 |------|-----|-------------|-------------------|
-| AGENTS_estudios | Mi casa | brain/ORDERS.md, brain/HANDOFF.md, brain/STATE.md, report_github.md, REPOS.md | Cada ciclo (1h worker / 4h reporter) |
-| data-science-uncuyo | Reporter output | HANDOFF_REPORTER.md — reporte consolidado de los 3 repos monitoreados | Cada 4h (solo si hay cambios) |
+| AGENTS_estudios | Mi casa | report_github.md, REPOS.md, brain/ (ORDERS, HANDOFF, STATE) | Cada reporte/orden |
+| data-science-uncuyo | Trabajo | HANDOFF_REPORTER.md, reportes del pipeline | Cada reporter tick (4h) |
 
 ---
 
-## Mapa de Repos — Toda la cuenta frog-estudio
+## Mapa de Repos — Toda la cuenta
 
 | # | Repo | Categoria | Estado | Owner | Prioridad | Ultimo commit | Archivos | Lenguaje principal | Funcion |
 |---|------|-----------|--------|-------|-----------|---------------|----------|-------------------|---------|
-| 1 | AGENTS_estudios | AGENT | ACTIVO | YO (estudios-reporter) | HIGH | 2026-05-07 | 5 | Markdown | Brain del worker — ordenes, handoffs, memoria |
-| 2 | data-science-uncuyo | PROYECTO | ACTIVO | YO (estudios-reporter) | HIGH | 2026-05-12 | 1049 | Markdown | Estudio DS UNCuyo — 70 outputs, notas carrera |
-| 3 | data-science | PROYECTO | INACTIVO | YO (estudios-reporter) | MEDIUM | 2026-05-04 | 97 | Markdown | Repo historico — energy-lab cancelado, paused |
-| 4 | cannabis-inteligencia | EXPERIMENTO | BOOTSTRAP | NADIE | LOW | 2026-04-16 | 19 | Markdown | Scaffold cannabis — sin contenido real |
-
-## Repo Externo con Acceso
-
-| # | Repo | Cuenta | Categoria | Estado | Owner | Acceso |
-|---|------|--------|-----------|--------|-------|--------|
-| 5 | botardo-os | bautiarmanicode | SISTEMA | ACTIVO | BOTARDO_OS | READ-ONLY (NUNCA escribir) |
+| 1 | AGENTS_estudios | AGENT | ACTIVO | YO (estudios-reporter) | HIGH | 2026-05-14 | 5 | N/A (Markdown) | Brain del worker de estudios |
+| 2 | data-science-uncuyo | PROYECTO | ACTIVO (completado) | YO (estudios-reporter) | HIGH | 2026-05-12 | 1049 | Python/Markdown | Carrera DS UNCuyo — 70/70 outputs |
+| 3 | data-science | PROYECTO | INACTIVO (PAUSADO) | YO (estudios-reporter) | MEDIUM | 2026-05-04 | 97 | Markdown | Historico energy-lab + estudio-0003 |
+| 4 | cannabis-inteligencia | PROYECTO | INACTIVO (BOOTSTRAP) | BOTARDO_OS (bautiarmanicode) | LOW | 2026-04-16 | 19 | Markdown | Scaffold cannabis — sin contenido real |
+| 5 | botardo-os | TOOL | ACTIVO | BOTARDO_OS (bautiarmanicode) | HIGH | 2026-05-14 | 1758 | Python/Markdown/TypeScript | Hub central BOTARDO OS (READ-ONLY para mi) |
 
 ---
 
@@ -62,217 +60,353 @@
 **Categoria**: AGENT | **Estado**: ACTIVO | **Prioridad**: HIGH | **Owner**: YO (estudios-reporter)
 
 **URL**: https://github.com/frog-estudio/AGENTS_estudios
-**Lenguaje principal**: Markdown | **Tamaño**: 4 KB
-**Ultimo commit**: 2026-05-07 — "worker: reporte inicial — 4 repos auditados, orden 001 DONE"
-**Total archivos**: 3 (antes de este reporte)
+**Lenguaje principal**: N/A (Markdown)
+**Tamano**: 10 KB
+**Ultimo commit**: 2026-05-14 — "report: github account scan — estudios-reporter — 2026-05-15"
+**Total archivos**: 5
 
-**Descripcion**: Repo cerebro del worker de estudios. Contiene la cola de ordenes del CEO (brain/ORDERS.md), los reportes consolidados de handoff entre sesiones (brain/HANDOFF.md), y el estado del worker (brain/STATE.md). Este es el UNICO repo donde escribo archivos de operacion — report_github.md, REPOS.md, y actualizaciones de brain/. Ninguna otra sandbox debe escribir aqui.
+**Descripcion**: Repo AGENT exclusivo del worker estudios-reporter. Funciona como cerebro del worker: contiene la cola de ordenes del CEO (ORDERS.md), el reporte consolidado (HANDOFF.md), el estado del worker (STATE.md), el reporte GitHub (report_github.md) y el mapa de repos (REPOS.md). Es el unico repo donde el worker tiene permiso de escritura ademas de data-science-uncuyo.
 
 **Estructura**:
 ```
 AGENTS_estudios/
+  report_github.md       # Este reporte
+  REPOS.md               # Mapa de repos
   brain/
-    ORDERS.md    — Cola de ordenes del CEO (1 orden DONE)
-    HANDOFF.md   — Reporte consolidado de todos los repos
-    STATE.md     — Estado del worker (ACTIVE)
-  report_github.md  — Este reporte
-  REPOS.md          — Mapa de repos
+    ORDERS.md            # Cola de ordenes del CEO (1 DONE)
+    HANDOFF.md           # Reportes consolidados
+    STATE.md             # Estado del worker
 ```
 
 **Archivos clave**:
 - README.md: No existe
-- brain/ORDERS.md: 1 orden (001 DONE), sin pendientes
-- brain/HANDOFF.md: Reporte detallado de 4 repos con estructura, contenido y problemas
-- brain/STATE.md: ACTIVE, 1 orden completada, 0 errores
+- _CRON.md: No existe
+- _CONTEXT.md: No existe
+- _LOG.md: No existe
+- TASKS.md: No existe
+- brain/ORDERS.md: Cola de ordenes — 1 orden (001, DONE), sin pendientes
+- brain/HANDOFF.md: Reporte de 4 repos auditados con detalle
+- brain/STATE.md: Estado ACTIVE, session 2026-05-07, 1 orden completada
 
 **Ultimos 5 commits**:
-1. 2026-05-07 — worker: reporte inicial — 4 repos auditados, orden 001 DONE
-2. 2026-05-07 — initial structure
+1. e6b8c65 — report: github account scan — estudios-reporter — 2026-05-15
+2. 5bda216 — worker: reporte inicial — 4 repos auditados, orden 001 DONE
+3. 76e3a68 — initial structure
 
 **Contenido detallado**:
-Este repo es minimalista por diseño — funciona como el cerebro operativo del worker de estudios. La orden 001 (auditoria inicial de todos los repos de frog-estudio) fue completada el 2026-05-07, generando un HANDOFF.md exhaustivo con el panorama completo de los 4 repos de la cuenta. Desde entonces, no hay ordenes pendientes — el worker ejecuta ticks cada 1h buscando PENDING orders y el reporter ejecuta ticks cada 4h monitoreando cambios. El estado es ACTIVE con 0 errores. Con este reporte, el repo pasa de 3 a 5 archivos (agregando report_github.md y REPOS.md).
+El repo es minimalista por diseno. Solo contiene 5 archivos Markdown en una estructura plana con un subdirectorio brain/. Fue creado el 2026-05-07 como parte del onboarding de estudios-reporter. La estructura sigue el modelo AGENT_REPO v2.0 de BOTARDO OS, aunque de forma simplificada: carece de memory/, output/, proposals/, inbox/ y apps/. Tiene un report_github.md previo que sera sobrescrito por este reporte. El HANDOFF.md contiene un panorama detallado de los 4 repos de frog-estudio con problemas detectados y estado actual. Las ordenes (ORDERS.md) estan al dia con 1 orden completada y ninguna pendiente.
 
 **Problemas detectados**:
-- Falta README.md explicando el proposito del repo
-- Falta estructura base completa (memory/, proposals/) segun AGENT_REPO_STRUCTURE.md v2.0
+- Falta README.md en raiz (el repo no tiene descripcion visible en GitHub)
+- No tiene estructura completa de AGENT_REPO v2.0 (falta memory/, output/, proposals/)
+- Estructura minimalista pero funcional para las necesidades actuales
 
 **Recomendaciones**:
-- Agregar README.md con descripcion del proposito del repo
-- Crear directorio memory/ para conocimiento persistente entre sesiones
+- Agregar README.md basico que describa el proposito del repo
+- Considerar agregar memory/ si el worker acumula conocimiento entre sesiones
 
 ---
 
 ### 2. data-science-uncuyo
 
-**Categoria**: PROYECTO | **Estado**: ACTIVO | **Prioridad**: HIGH | **Owner**: YO (estudios-reporter)
+**Categoria**: PROYECTO | **Estado**: ACTIVO (completado) | **Prioridad**: HIGH | **Owner**: YO (estudios-reporter)
 
 **URL**: https://github.com/frog-estudio/data-science-uncuyo
-**Lenguaje principal**: Markdown | **Tamaño**: 51 MB
-**Ultimo commit**: 2026-05-12 06:17 UTC — "reporter: tick 14:14 — reorg PRE-BOTARDO OS v3 detectada"
-**Total archivos**: 1049 | **Branch**: main (publico)
+**Lenguaje principal**: Python/Markdown
+**Tamano**: 52189 KB (~51 MB)
+**Ultimo commit**: 2026-05-12 — "reporter: tick 14:14 — reorg PRE-BOTARDO OS v3 detectada, estructura post-audit"
+**Total archivos**: 1049
+**Branch**: main
 
-**Descripcion**: Repo principal de la Tecnicatura Universitaria en Ciencia de Datos (ITU UNCUYO). Es el repositorio mas grande y activo de la cuenta frog-estudio. Contiene tres tipos de contenido: (1) notas reales del CEO para la carrera en notas_carrera/, (2) 70 outputs generados por el pipeline Botardo Studio en .botardo/estudio-0003/output/ cubriendo 10 rotaciones tematicas de DS, y (3) archivos de infraestructura del sistema de reporteo (_TICK.md, _CONTEXT.md, _LOG.md, HANDOFF_REPORTER.md). Ademas contiene un directorio _review/ con 862 archivos legacy movidos durante la auditoria PRE-BOTARDO OS.
+**Descripcion**: Repo principal de estudio para la Tecnicatura Universitaria en Ciencia de Datos (ITU UNCuyo). Es el repositorio mas grande de la cuenta frog-estudio y contiene materiales de ingreso 2026b, plan de estudios detallado, notas de carrera reales del CEO, y outputs de 4 pipelines Botardo Studio que generaron 70/70 entregables de estudio. El pipeline estudio-0003 completo las 10 rotaciones tematicas (ES1-ES7 x R1-R10) abarcando datasets, papers, ejercicios, herramientas, cheat sheets, cursos MOOC y tutoriales E2E.
 
 **Estructura**:
 ```
-data-science-uncuyo/                    (1049 archivos, 51 MB)
-  .botardo/                             (82 archivos — infraestructura)
-    estudio-0003/                       (72 archivos — PIPELINE COMPLETO 70/70)
-      output/                           (70 outputs ES1-ES7 x 10 rotaciones)
-      handoff.md                        (estado FINALIZADO)
-    AGENTS.md, CONTEXT.md, CRON_*.md    (config BOTARDO OS)
-  _review/                              (862 archivos — legacy movidos, NO BORRAR)
-    _bot_legacy/estudio_carrera/        (~136 archivos — simulacros, exams)
-    skills/                             (~69 MB — 47 skills del sistema)
-    estudio-1/                          (72 archivos — legacy)
-    estudio-2/                          (38 archivos — legacy)
-    estudio-3/                          (48 archivos — legacy)
-    botardo_output/                     (27 archivos — outputs root legacy)
-    search_cache/                       (15 JSON — cache busquedas)
-  notas_carrera/                        (96 archivos — contenido real del CEO)
-    ingreso_2026b/                      (matematica, CL, vocacional)
-    plan_estudios/                      (plan general, trackers)
-    semestres/                          (estructura 4 semestres)
-  Raiz                                  (_TICK.md, _CONTEXT.md, HANDOFF_REPORTER.md, etc.)
+data-science-uncuyo/
+  _TICK.md                    # TICK Model (sistema nervioso)
+  _CONTEXT.md                 # Contexto del proyecto
+  _LOG.md                     # Log de operaciones
+  README.md                   # Descripcion del repo
+  GOALS.md                    # Metas y deadlines
+  TASKS.md                    # Tareas del proyecto
+  worklog.md                  # Bitacora de trabajo
+  HANDOFF_REPORTER.md         # Output del reporter (yo)
+  notas_carrera/              # Notas reales del CEO (24 MB)
+    ingreso_2026b/            # Matematica, CL, Vocacional
+    modulos_especificos/      # Modulos May-Jun 2026
+    plan_estudios/            # Plan general, trackers, zettelkasten
+    semestres/                # Estructura 4 semestres (s1-s4)
+  .botardo/                   # Infraestructura BOTARDO OS
+    estudio-0003/             # Pipeline activo (completo 70/70)
+  _review/                    # Archivos movidos en auditoria (NO BORRAR)
+    _bot_legacy/              # ~136 archivos legacy
+    skills/                   # 47+ skills del sistema (~69 MB)
+    search_cache/             # 15 JSONs temporales
+    estudio-1/                # Pipeline anterior + outputs
+    estudio-2/                # Pipeline anterior + outputs
+    estudio-3/                # Pipeline anterior + outputs
+    handoff_legacy/           # Handoffs antiguos
+    botardo_output/           # Outputs de estudios-3
 ```
 
 **Archivos clave**:
-- README.md: Documentacion completa del repo
-- _CONTEXT.md: Identidad del TICK, reglas, estructura
-- _LOG.md: Registro de operaciones — onboarding, auditorias PRE-BOTARDO OS
-- HANDOFF_REPORTER.md: Reporte consolidado (tick #25)
-- .botardo/estudio-0003/handoff.md: Estado FINALIZADO 70/70
+- README.md: Descripcion del repo con estructura, pipeline Botardo Studio (69/70 al momento de escritura, hoy 70/70)
+- _CONTEXT.md: Reglas, identidad, estructura del proyecto
+- _LOG.md: Log de operaciones del sistema
+- TASKS.md: Tareas del proyecto
+- HANDOFF_REPORTER.md: Output del reporter (generado por estudios-reporter cada 4h)
+- GOALS.md: Metas y deadlines del CEO
 
 **Ultimos 5 commits**:
-1. 2026-05-12 — reporter: tick 14:14 — reorg PRE-BOTARDO OS v3 detectada
-2. 2026-05-12 — orden: reorganizacion pre-BOTARDO OS v3 — legacy a _review
-3. 2026-05-12 — reporter: tick 10:14 — PROGRAMA COMPLETO 70/70
-4. 2026-05-12 — handoff: hash C70 ES7
-5. 2026-05-12 — Ciclo 70 ES7 tutorial_dqn_inventario — PROGRAMA COMPLETO 70/70
+1. ec2697b — reporter: tick 14:14 — reorg PRE-BOTARDO OS v3 detectada, estructura post-audit
+2. 3fda759 — orden: reorganizacion pre-BOTARDO OS v3 — legacy estudios 1/2/3 + outputs + handoffs a _review
+3. 0246df5 — reporter: tick 10:14 — PROGRAMA COMPLETO 70/70, todas las rotaciones finalizadas
+4. 9788a38 — handoff: hash C70 ES7
+5. 96fe3f2 — Ciclo 70 ES7 tutorial_dqn_inventario — PROGRAMA COMPLETO 70/70
 
 **Contenido detallado**:
-Este repo alcanzo un milestone importante el 2026-05-12: el programa de estudio-0003 se completo con 70/70 outputs. Las 10 rotaciones tematicas cubrieron: DS General/Tabular, Argentina-LatAm DS, Feature Engineering+Timeseries, Data-Centric AI+Fairness, Python Avanzado+SWE, Anomaly Detection+AutoML, FinTech Quant Finance, Sports Analytics, Computer Vision, y Reinforcement Learning. Cada rotacion genero 7 outputs (ES1 datasets, ES2 papers, ES3 ejercicio, ES4 herramientas, ES5 cheatsheet, ES6 cursos MOOC, ES7 tutorial). El pipeline fue gestionado por 4 instancias previas de Botardo (estudio-1 a estudio-3, ahora movidas a _review/) antes de ser consolidado en estudio-0003. La auditoria PRE-BOTARDO OS (3 versiones) reorganizo el repo completamente. El reporter monitorea cada 4h generando HANDOFF_REPORTER.md.
+El repo es el resultado de un programa de estudio automatizado de 10 rotaciones tematicas (R1 a R10) que cubrio: datasets publicos y especializados, papers de ML/DL, ejercicios practicos de Python, herramientas de Data Science, cheat sheets de referencia, cursos MOOC gratuitos y tutoriales E2E completos. Se generaron 70 entregables de estudio. Las rotaciones abarcaron temas como Computer Vision, Finanzas, Sports Analytics, Deep Learning, NLP, MLOps, Series Temporales y Reinforcement Learning.
+
+El repo tambien contiene las notas reales de carrera del CEO organizadas en notas_carrera/ con material de ingreso (matematica 5 semanas, comprension lectora, curso vocacional), plan de estudios con trackers y zettelkasten. Tras una auditoria PRE-BOTARDO OS v3 (commit 3fda759), los outputs de pipelines legacy (estudio-1, estudios-2, estudios-3), handoffs antiguos, skills del sistema (~69 MB, 67% del repo) y archivos dudosos fueron movidos a _review/. El repo quedo limpio con la estructura esencial del proyecto y los materiales de carrera.
+
+El programa estudio-0003 completo el 2026-05-11 con 70/70 outputs. El repo esta ahora en estado de mantenimiento. El reporter (yo) monitorea cambios cada 4h via CRON Job 130353.
 
 **Problemas detectados**:
-- Job 130360 (estudio-0003 worker, cada 2h) sigue activa — requiere desactivacion CEO (HIGH)
-- _review/ tiene 862 archivos pendientes de revision CEO (MEDIUM)
-- README menciona "69/70 outputs" pero ya son 70/70 (LOW)
+- **_review/ = ~69 MB (67% del repo)** — Skills del sistema y contenido legacy ocupan la mayoria del espacio. Considerar remover si no se necesitan
+- **Programa completado, sin nuevas ordenes** — El repo no tiene actividad productiva desde 2026-05-12
+- **Job 130360 (estudio-0003 worker) aun activo** — El cron job del pipeline sigue corriendo cada 2h a pesar de estar 70/70 completo
 
 **Recomendaciones**:
-- Desactivar Job 130360 — programa completo
-- CEO debe decidir sobre _review/ (mantener/archivar/borrar)
-- Actualizar README.md para reflejar 70/70
+- Desactivar Job 130360 (estudio-0003 worker) — el programa esta completo
+- Considerar limpiar _review/skills/ para reducir el tamano del repo de 51 MB
+- Definir proximos pasos: retomar estudio con nuevas rotaciones o archivar el repo
 
 ---
 
 ### 3. data-science
 
-**Categoria**: PROYECTO | **Estado**: INACTIVO (paused) | **Prioridad**: MEDIUM | **Owner**: YO (estudios-reporter)
+**Categoria**: PROYECTO | **Estado**: INACTIVO (PAUSADO) | **Prioridad**: MEDIUM | **Owner**: YO (estudios-reporter) / BOTARDO_OS
 
 **URL**: https://github.com/frog-estudio/data-science
-**Lenguaje principal**: Markdown | **Tamaño**: 1.2 MB
+**Lenguaje principal**: N/A (Markdown)
+**Tamano**: 1212 KB (~1.2 MB)
 **Ultimo commit**: 2026-05-04 — "handoff: estudio-0003 backup migracion"
-**Total archivos**: 97 | **Branch**: master (privado)
+**Total archivos**: 97
+**Branch**: master
 
-**Descripcion**: Repo historico con dos vidas: primero como energy-lab (cancelado por CEO, ~390 commits legacy), luego repropuesto para estudio-0003. Los outputs se migraron a data-science-uncuyo, dejando este repo paused. Contiene material de investigacion DS valioso (RESEARCH.md con 118 secciones, 1.5 MB) y 14 deliverables educativos.
+**Descripcion**: Repo historico que sirvio para dos propositos: (1) energy-lab, un proyecto de investigacion en Data Science aplicada a energia que genero 118 secciones de investigacion y ~18 outputs antes de ser cancelado por el CEO en 2026-04-18; y (2) estudio-0003, un pipeline Botardo Studio que fue configurado pero nunca genero outputs aqui (fue migrado a data-science-uncuyo). Tiene 391 commits legacy. El repo esta en estado PAUSADO — los crons heartbeat fueron desactivados y el CEO no ha definido nueva direccion.
 
 **Estructura**:
 ```
-data-science/                          (97 archivos, 1.2 MB)
-  .botardo/                            (infraestructura BOTARDO OS)
-    estudio-0003/                      (handoff backup — sin outputs)
-    output/                            (18 outputs legacy energy-lab)
-  ciencia_datos/                       (contenido educativo)
-    RESEARCH.md                        (118 secciones, 1.5 MB)
-    deliverables/                      (14 entregables)
-    trackers/, REPORTES/, D*.md        (planes, roadmaps, briefs)
-  Raiz                                  (ROADMAP.md, STATUS.md, DASHBOARD.md)
+data-science/
+  README.md                   # Descripcion del repo (energy-lab)
+  ROADMAP.md                  # Roadmap del proyecto
+  ACUMULAR_ESTUDIOS.md        # Plan de acumulacion de estudios
+  STATUS.md                   # Status general
+  TASKS.md                    # Tareas
+  HANDOFF_estudio-0003.md     # Handoff principal del worker
+  ciencia_datos/              # Investigacion DS
+    RESEARCH.md               # 28,077 lineas / 1.5 MB, 118 secciones
+    DS_Study_Plan.md          # Plan de estudio
+    DS_Career_Action_Plan.md  # Plan de carrera
+    DS_Interview_Prep_Guide.md # Guia de entrevistas
+    deliverables/             # 14 deliverables
+    REPORTES/                 # Reportes semanales
+    trackers/                 # Trackers de evaluacion
+  .botardo/                   # Infraestructura BOTARDO OS
+    estudio-0003/             # Setup migrado (sin outputs)
+    output/                   # ~18 outputs legacy energy-lab
+    handoff/                  # Handoffs de sesiones
+    lab/                      # Laboratorio DS
 ```
 
 **Archivos clave**:
-- README.md: Documentacion de energy-lab (desactualizada)
-- ciencia_datos/RESEARCH.md: 28,077 lineas de investigacion DS
-- TASKS.md: Tareas del proyecto
-- HANDOFF_estudio-0003.md: Handoff backup
+- README.md: Descripcion del proyecto como "Energy Lab — Data Science"
+- TASKS.md: Tareas del proyecto (sin cambios recientes)
+- HANDOFF_estudio-0003.md: Handoff del worker estudio-0003
+- ciencia_datos/RESEARCH.md: 28,077 lineas de investigacion en DS — el asset mas valioso del repo
 
 **Ultimos 5 commits**:
-1. 2026-05-04 — handoff: estudio-0003 backup migracion
-2. 2026-05-04 — estudio-0003: initial setup
-3. 2026-04-28 — CEO: crons desactivadas, estado paused
-4. 2026-04-28 — HB cycle 86: SILENCIO
-5. 2026-04-28 — HB cycle 85: SILENCIO
+1. 9f39c48 — handoff: estudio-0003 backup migracion
+2. 198aa2e — estudio-0003: initial setup — handoff, TASKS, output structure
+3. ca4c2f3 — CEO: crons desactivadas, estado paused
+4. 8dc8821 — HB cycle 86: SILENCIO
+5. 64985bb — HB cycle 85: SILENCIO
 
 **Contenido detallado**:
-Este repo fue el hogar del proyecto energy-lab (~390 commits de investigacion sobre monitoreo energetico, CAMMESA, dashboards Grafana). Cancelado por CEO el 2026-04-18. Repropuesto para estudio-0003 pero migrado a data-science-uncuyo. El contenido mas valioso: RESEARCH.md (118 secciones de ML, DL, NLP, timeseries, MLOps) y 14 deliverables (guias de estudio, planes de carrera, SQL workbooks). Sin actividad productiva ni monitoreo activo.
+El valor principal de este repo reside en ciencia_datos/RESEARCH.md, un archivo masivo de 28,077 lineas que contiene 118 secciones de investigacion en Data Science cubriendo temas avanzados de ML, deep learning, NLP, time series y MLOps. Tambien hay 14 deliverables sustanciales en ciencia_datos/deliverables/ que incluyen planes de estudio, workbooks de SQL, guias de entrevistas y trackers de progreso.
+
+El proyecto energy-lab genero ~18 outputs de investigacion en .botardo/output/ antes de ser cancelado por el CEO en abril 2026. Los heartbeats del pipeline fueron desactivados progresivamente (SILENCIO en ciclos 80-86). El estudio-0003 fue configurado aqui con estructura de handoff y TASKS, pero nunca genero outputs — fue migrado completamente a data-science-uncuyo. Desde el commit del 2026-05-04 (backup migracion), el repo ha estado completamente inactivo.
 
 **Problemas detectados**:
-- README.md describe energy-lab cancelado — desactualizado
-- Repo "zombie" sin actividad productiva
-- estudio-0003 handoff backup redundante
-- No tiene HANDOFF.md propio
+- **Repo PAUSADO sin direccion definida** — 391 commits legacy sin actividad nueva
+- **RESEARCH.md = 1.5 MB** — Asset valioso pero potencialmente duplicado o superado
+- **Branch master** — No migrado a main (inconsistencia con otros repos)
+- **Sin README actualizado** — Describe energy-lab pero el proyecto fue cancelado
 
 **Recomendaciones**:
-- Decidir si archivar, repurponer, o mantener
-- Mover RESEARCH.md y deliverables a data-science-uncuyo si se preservan
+- Definir el futuro del repo: migrar research a data-science-uncuyo, archivar, o reactivar
+- Actualizar README para reflejar estado PAUSADO
+- Migrar branch de master a main para consistencia
+- Evaluar si RESEARCH.md tiene contenido unico no cubierto por estudio-0003 outputs
 
 ---
 
 ### 4. cannabis-inteligencia
 
-**Categoria**: EXPERIMENTO | **Estado**: BOOTSTRAP | **Prioridad**: LOW | **Owner**: NADIE
+**Categoria**: PROYECTO | **Estado**: INACTIVO (BOOTSTRAP) | **Prioridad**: LOW | **Owner**: BOTARDO_OS (bautiarmanicode)
 
-**URL**: https://github.com/frog-estudio/cannabis-inteligencia
-**Lenguaje principal**: Markdown | **Tamaño**: 16 KB
+**URL**: https://github.com/bautiarmanicode/cannabis-inteligencia
+**Lenguaje principal**: N/A (Markdown)
+**Tamano**: 16 KB
 **Ultimo commit**: 2026-04-16 — "BOTARDO OS: DASHBOARD.md + GOALS.md creados"
-**Total archivos**: 19 | **Branch**: master (privado)
+**Total archivos**: 19
+**Branch**: master
 
-**Descripcion**: Repo scaffold para proyecto de cannabis con automatizacion. BOTARDO OS booteo estructura (ROADMAP, BOARD, DASHBOARD, GOALS, STATUS). Existe roadmap detallado de 4 fases (grow tent 80x80, LED 240W, ROI 733%). Sin contenido real producido: GOALS.md vacio, departamentos en 0, instancia cannabis-1 pausada. 29 dias sin actividad.
+**Descripcion**: Repo scaffold para proyecto de cannabis + automatizacion/inteligencia artificial. BOTARDO OS booteo la estructura basica en abril 2026 con roadmap, board y sistema .botardo/. Existe un ROADMAP_PROJECT.md detallado de 4 fases (diseno, adquisicion, armado, automatizacion) con proyeccion de ROI 733%, pero cero contenido real fue producido. Todos los departamentos estan en 0 archivos. La instancia cannabis-1 esta pausada en migracion con 0 ciclos ejecutados. El repo pertenece a la cuenta bautiarmanicode y esta en estado de bootstrap puro.
 
 **Estructura**:
 ```
-cannabis-inteligencia/                 (19 archivos, 108 KB)
-  .botardo/cannabis-1/                 (instancia pausada, 0 ciclos)
-  Cannabis/                            (Obsidian vault scaffold)
-  _system/                             (activity log, pipeline status)
-  Raiz                                  (ROADMAP, BOARD, DASHBOARD, GOALS, STATUS)
+cannabis-inteligencia/
+  README.md                   # Auto-generado por BOTARDO OS
+  00_INDEX.md                 # Indice del proyecto
+  01_AI_INSIGHTS.md           # Insights de IA (vacio)
+  ROADMAP.md                  # Roadmap general
+  ROADMAP_PROJECT.md          # Roadmap R&D detallado
+  BOARD.md                    # 7 tareas, 29% completado
+  GOALS.md                    # VACIO
+  STATUS.md                   # Status del proyecto
+  Cannabis/                   # Carpeta Obsidian vault
+    00_INDEX.md
+    00_Estrategia/00_INDEX.md
+  _system/                    # Sistema BOTARDO OS
+  .botardo/                   # Infraestructura BOTARDO OS
+    PROJECT.md
+    cannabis-1/ (TASKS.md, handoff.md)
 ```
 
 **Archivos clave**:
-- README.md: Auto-generado por BOTARDO OS
-- ROADMAP_PROJECT.md: Plan R&D detallado — 4 fases
-- BOARD.md: 7 tareas, 29% completado
+- README.md: Auto-generado por BOTARDO OS, describe estado "Low activity"
+- ROADMAP_PROJECT.md: Plan R&D detallado con grow tent 80x80, LED 240W, ROI 733%
 - GOALS.md: VACIO
+- BOARD.md: 7 tareas, 29% completado
 
 **Ultimos 5 commits**:
-1. 2026-04-16 — BOTARDO OS: DASHBOARD.md + GOALS.md creados
-2. 2026-04-15 — feat: bootstrap .botardo/ — arquitectura BOTARDO OS v2
-3. 2026-04-14 — ROADMAP.md — Roadmap for cannabis-inteligencia
-4. 2026-04-14 — BOARD.md — Task board for cannabis-inteligencia
-5. 2026-04-06 — Auto-Maintainable: STATUS.md generated by BOTARDO OS
+1. d65b521 — BOTARDO OS: DASHBOARD.md + GOALS.md creados
+2. 5a9e9ee — feat: bootstrap .botardo/ — arquitectura BOTARDO OS v2
+3. 965d637 — ROADMAP.md — Roadmap for cannabis-inteligencia
+4. 5e69008 — BOARD.md — Task board for cannabis-inteligencia
+5. 43c9e64 — Auto-Maintainable: STATUS.md generated by BOTARDO OS
 
 **Contenido detallado**:
-Proyecto en fase de planificacion pura. Roadmap ambicioso: planta indoor automatizada con sensores, riego, analisis Python. ROI proyectado 733% en 6 meses. Ejecucion cero: no hay sensores, codigo, datos reales, ni imagenes de progreso. Instancia cannabis-1 nunca arranco ciclos. Necesita decision del CEO: activar, archivar, o cancelar.
+El repo es un scaffold puro sin contenido ejecutivo. La unica actividad real fue el bootstrapping por BOTARDO OS que creo la estructura basica: README auto-generado, roadmap, board, y sistema .botardo/. El ROADMAP_PROJECT.md contiene un plan R&D ambicioso de 4 fases para cultivo indoor automatizado con monitoreo por IA, pero no hay ningun codigo, sensor, ni dato producido. La instancia cannabis-1 nunca ejecuto ciclos (0 ciclos, PAUSADA en migracion). El repo parece estar en espera de activacion del CEO, sin actividad desde abril 2026. Notablemente, el repo pertenece a la cuenta bautiarmanicode (no frog-estudio directamente).
 
 **Problemas detectados**:
-- 29 dias sin actividad
-- GOALS.md vacio, sin HANDOFF.md
-- Sin contenido real producido
+- **Sin contenido real** — Solo estructura scaffold, cero ejecucion
+- **Branch master** — Inconsistencia con convencion main
+- **Pertenece a bautiarmanicode** — No es un repo de frog-estudio directamente
+- **Sin HANDOFF.md** propio en raiz
+- **GOALS.md vacio** — Sin objetivos definidos
 
 **Recomendaciones**:
-- CEO debe decidir: activar, archivar, o eliminar
-- Si activa: definir GOALS, configurar cron, crear HANDOFF.md
+- Definir si el proyecto sigue vigente o se archiva
+- Si se activa, crear HANDOFF.md y definir GOALS
+- Si no, mover a estado ARCHIVE
 
 ---
 
-### 5. botardo-os (EXTERNO — READ-ONLY)
+### 5. botardo-os
 
-**Categoria**: SISTEMA | **Estado**: ACTIVO | **Prioridad**: N/A | **Owner**: BOTARDO_OS (bautiarmanicode)
+**Categoria**: TOOL | **Estado**: ACTIVO | **Prioridad**: HIGH | **Owner**: BOTARDO_OS (bautiarmanicode) — **READ-ONLY PARA MI**
 
 **URL**: https://github.com/bautiarmanicode/botardo-os
-**Lenguaje principal**: Python | **Tamaño**: 10.6 MB
-**Ultima actividad**: 2026-05-14 19:00 UTC
+**Lenguaje principal**: Python/Markdown/TypeScript
+**Tamano**: 11694 KB (~11.4 MB)
+**Ultimo commit**: 2026-05-14 — "Merge branch 'main'"
+**Total archivos**: 1758
+**Branch**: main
 
-**Descripcion**: Cerebro evolutivo de BOTARDO OS. Repo externo de bautiarmanicode. Solo acceso de lectura. NUNCA escribir aqui.
+**Descripcion**: El cerebro central del ecosistema BOTARDO OS. Es un sistema operativo para agentes autonomos que orquesta multiples proyectos via Discord + Git + Markdown + Cron. El repo contiene toda la documentacion de arquitectura (brain/), un dashboard web Next.js 16 (dashboard/), templates de agentes, patrones de R&D (22 documentados), un catalogo de 56+ personalidades (The Agency), boot prompts y SOUL cards (sandbox/), y un sistema de misiones IDA y VUELTA para coordinar sandboxes. Es el hub que conecta al CEO con multiples proyectos (VISTTA LAB, Musica, Gaming, Fanvue, Estudios).
+
+**Estructura**:
+```
+botardo-os/
+  README.md                   # Documentacion completa del sistema
+  _CRON.md                    # CRON del hub central
+  _CONTEXT.md                 # Contexto del proyecto
+  _LOG.md                     # Log de operaciones
+  .env                        # Variables de entorno
+  brain/                      # Cerebro del sistema (30+ archivos)
+    PRINCIPIOS.md             # 10 leyes inmutables
+    NAVEGACION.md             # Mapa de 540 archivos
+    ARCHITECTURE.md           # Arquitectura v3.4
+    CRON_MODEL.md             # Modelo de ejecucion v2.0
+    CRON_INDEX.md             # Registro de CRONs
+    ECOSYSTEM_STRUCTURE.md    # Proyectos, cuentas, slots
+    GOALS.md                  # Objetivos y KPIs
+    ORDERS.md                 # Ordenes de self-improvement
+    MISIONES/                 # Misiones por cuenta (IDA+VUELTA)
+    personas/                 # The Agency (56+ personalidades)
+    TEMPLATES/                # Plantillas vivas
+    ARKER_CRONS/              # CRONs de otros sandboxes
+  dashboard/                  # Web app Next.js 16
+    src/app/                  # Paginas (brain, crons, infra, kpis, etc.)
+    src/components/           # Sidebar, markdown, toast
+    public/data/              # dashboard.json
+  r&d/                        # Investigacion y desarrollo
+    patterns/                 # 22 patrones documentados
+    archive/                  # Docs legacy (incl. SANDMAN)
+    vault/                    # Frameworks de referencia
+  sandbox/                    # Boot prompts y SOUL cards
+  templates/                  # Agent templates (L0, L1, L2)
+  incubation/                 # Skills en incubacion
+  registry/                   # Registros del ecosistema
+  _review/                    # Referencia historica (no editar)
+```
+
+**Archivos clave**:
+- README.md: Documentacion completa del sistema — 570 lineas describiendo arquitectura, leyes, CRONs, infraestructura, patrones y roadmap
+- _CRON.md: CRON del hub central con T01-T07 (sistema nervioso), P01 (auditoria completada), C01 (vacio)
+- _CONTEXT.md: Identidad, reglas, estructura post-audit, issues detectados
+- _LOG.md: Historial de operaciones del hub
+
+**Ultimos 5 commits**:
+1. 22a499d — Merge branch 'main'
+2. b9ce6fe — sandbox UUID
+3. 70e80eb — feat: AGENT_ repo model v2.0 — 1 sandbox = 1 repo
+4. 04b8064 — sandbox UUID
+5. cafaea2 — nav: actualizar NAVEGACION v1.1
+
+**Contenido detallado**:
+BOTARDO OS es el proyecto mas activo y complejo de la cuenta bautiarmanicode. Con 1758 archivos y 540+ documentos Markdown, constituye el cerebro evolutivo que orquesta todo el ecosistema de agentes autonomos del CEO. El sistema opera bajo 10 leyes inmutables donde el principio fundamental es "el sistema PROPONE, el CEO DISPONE" — nada se ejecuta sin firma del CEO.
+
+La arquitectura se organiza en 3.5 capas: CAPA 1 (Orquestador via Discord), CAPA 2 (CRON Loops que ejecutan tareas en sandbox), CAPA 2.5 (Evolucion via BOTARDO-AGENCY que propone mejoras sin auto-aplicarlas), y CAPA 3 (Web On-Demand para tareas pesadas). Actualmente tiene 1 CRON activo (BOTARDO-DEV, Job 127122 cada 2h) y 11 CRONs planificados sin motor. El dashboard web (Next.js 16) se auto-deploya via Vercel.
+
+El hub central gestiona 6 proyectos: BOTARDO OS (hub), VISTTA LAB (peluqueria), Musica, Gaming, Fanvue Ops y Estudios. El CEO opera desde 9 cuentas Google y 7 cuentas GitHub con ~27 slots de sandbox disponibles. El sistema esta en Fase 2 (CAPA 2) del roadmap, con la Fase A de inventario en progreso.
+
+**Problemas detectados**:
+- **botardo-os/ es un subdirectorio que DUPLICA el repo** — 432 archivos cruzados
+- **.env commiteado en raiz** — Contiene DATABASE_URL local
+- **22 patrones documentados** — Existen pero no todos implementados
+
+**Recomendaciones**:
+- Limpiar subdirectorio botardo-os/ duplicado
+- Mover .env a .gitignore
+- Continuar Fase A del roadmap (inventario de sandboxes)
+
+---
+
+## REPOS.md — Mis Repos (para guardar en mi AGENT_)
+
+> Este archivo se guarda como REPOS.md en la raiz del repo AGENT_. Lo leo cada ciclo para saber donde trabajar.
+
+| # | Repo | URL | Rol (leo/escribo) | Tipo | Descripcion |
+|---|------|-----|-------------------|------|-------------|
+| 1 | AGENTS_estudios | https://github.com/frog-estudio/AGENTS_estudios | ESCRIBO | AGENT | Mi casa — brain, ordenes, handoffs, reportes |
+| 2 | data-science-uncuyo | https://github.com/frog-estudio/data-science-uncuyo | ESCRIBO | PROYECTO | Carrera DS UNCuyo — HANDOFF_REPORTER.md |
+| 3 | data-science | https://github.com/frog-estudio/data-science | LEO | PROYECTO | Historico energy-lab (PAUSADO) |
+| 4 | cannabis-inteligencia | https://github.com/bautiarmanicode/cannabis-inteligencia | LEO | PROYECTO | Scaffold cannabis (BOOTSTRAP) |
+| 5 | botardo-os | https://github.com/bautiarmanicode/botardo-os | LEO (READ-ONLY) | TOOL | Hub central BOTARDO OS — NUNCA escribo |
 
 ---
 
@@ -282,59 +416,60 @@ Proyecto en fase de planificacion pura. Roadmap ambicioso: planta indoor automat
 
 | # | Accion | Repo | Razon |
 |---|--------|------|-------|
-| 1 | Desactivar Job 130360 (estudio-0003 worker) | data-science-uncuyo | Programa completo 70/70 — consume recursos sin proposito |
-| 2 | Decidir futuro de _review/ (862 archivos) | data-science-uncuyo | Auditoria movio legacy — CEO debe decidir mantener/archivar/borrar |
+| 1 | Desactivar Job 130360 (estudio-0003 worker) | data-science-uncuyo | Programa completo 70/70, el cron sigue corriendo cada 2h sin efecto |
+| 2 | Definir futuro de data-science | data-science | Repo PAUSADO con 391 commits legacy, CEO no definio nueva direccion |
+| 3 | Definir futuro de cannabis-inteligencia | cannabis-inteligencia | Repo BOOTSTRAP sin contenido real desde abril 2026 |
 
 ### Mejoras
 
 | # | Accion | Repo | Razon |
 |---|--------|------|-------|
-| 1 | Agregar README.md | AGENTS_estudios | Falta documentacion del cerebro |
-| 2 | Actualizar README (69/70 -> 70/70) | data-science-uncuyo | Desactualizado |
-| 3 | Mover RESEARCH.md a data-science-uncuyo | data-science | Preservar contenido valioso |
-| 4 | Definir GOALS.md | cannabis-inteligencia | Sin direccion definida |
+| 1 | Agregar README.md a AGENTS_estudios | AGENTS_estudios | Repo sin descripcion visible en GitHub |
+| 2 | Limpiar _review/skills/ (~69 MB) | data-science-uncuyo | Skills del sistema ocupan 67% del repo |
+| 3 | Migrar branch master a main | data-science, cannabis-inteligencia | Inconsistencia con convencion main |
+| 4 | Actualizar README de data-science | data-science | Describe energy-lab pero proyecto fue cancelado |
+| 5 | Evaluar contenido unico de RESEARCH.md | data-science | Verificar si hay valor no cubierto por estudio-0003 |
 
 ### Archivar / Borrar
 
 | # | Repo | Razon | Destino |
 |---|------|-------|---------|
-| 1 | _review/skills/ (69 MB) | Skills del sistema, no del proyecto | Borrar |
-| 2 | data-science | Repo zombie desde migracion | ARCHIVE |
-| 3 | cannabis-inteligencia | 29 dias sin actividad | ARCHIVE |
+| 1 | cannabis-inteligencia | Sin contenido real en 4+ semanas | Archive o eliminar |
+| 2 | _review/skills/ en data-science-uncuyo | ~69 MB de skills globales no relacionadas con estudio | Limpiar del repo |
 
 ---
 
 ## Memoria para Otros Agentes
 
 ### Que hay en esta cuenta
-La cuenta frog-estudio tiene 4 repos enfocados en educacion y ciencia de datos. El repo principal (data-science-uncuyo) contiene 70 outputs de un programa completo de estudio DS (10 rotaciones x 7 etapas), notas de carrera reales del CEO, y contenido legacy de instancias previas.
+La cuenta frog-estudio tiene 4 repos dedicados al proyecto de Estudios del ecosistema BOTARDO OS. El repo principal es data-science-uncuyo con un programa de estudio automatizado completo (70/70 outputs de DS para la carrera UNCuyo), apoyado por un brain repo (AGENTS_estudios) y un repo historico (data-science) con investigacion DS legacy. Tambien hay acceso al repo botardo-os de la cuenta bautiarmanicode que es el hub central del ecosistema.
 
 ### Que puede usar otro agente
-- data-science-uncuyo (publico): 70 outputs educativos en .botardo/estudio-0003/output/
-- data-science-uncuyo (publico): notas_carrera/ con planes de estudio y trackers
-- data-science-uncuyo (publico): HANDOFF_REPORTER.md con estado consolidado
+- data-science/ciencia_datos/RESEARCH.md — 28,077 lineas de investigacion DS (ML, DL, NLP, MLOps)
+- data-science/ciencia_datos/deliverables/ — 14 deliverables (study plans, SQL workbooks, interview prep)
+- data-science-uncuyo/_review/estudio-1/output/ — ~90 outputs de estudio generados
+- AGENTS_estudios/brain/HANDOFF.md — Panorama detallado de los repos con problemas detectados
 
 ### Que NO tocar
-- AGENTS_estudios: SOLO estudios-reporter escribe aqui
-- .botardo/ en cualquier repo: Infraestructura BOTARDO OS
-- _review/ en data-science-uncuyo: CEO decide su destino
-- botardo-os: Repo de bautiarmanicode — NUNCA escribir
+- AGENTS_estudios — Escritura exclusiva de estudios-reporter. Otros agentes: read-only.
+- data-science-uncuyo/HANDOFF_REPORTER.md — Escritura exclusiva de estudios-reporter.
+- botardo-os — Escritura exclusiva de BOTARDO_OS (bautiarmanicode). Nunca escribir desde otra sandbox.
 
 ### Quien escribe en que
 
 | Repo | Sandbox owner | Solo lectura para |
 |------|-------------|-------------------|
-| AGENTS_estudios | YO (estudios-reporter) | Todos los demas |
-| data-science-uncuyo | YO (estudios-reporter) | Todos los demas |
-| data-science | YO (estudios-reporter) | Todos los demas |
-| cannabis-inteligencia | NADIE | Todos |
-| botardo-os (bautiarmanicode) | BOTARDO_OS | Yo (read-only) |
+| AGENTS_estudios | estudios-reporter (YO) | Todos los demas |
+| data-science-uncuyo | estudios-reporter (YO) | Todos los demas |
+| data-science | estudios-reporter / BOTARDO_OS | Todos los demas |
+| cannabis-inteligencia | BOTARDO_OS (bautiarmanicode) | Todos los demas |
+| botardo-os | BOTARDO_OS (bautiarmanicode) | Todos los demas |
 
 ### Contacto
-- CEO: Bauti (34U70)
-- Canal Discord: #estudios-reporter
-- Cuenta GitHub: frog-estudio
-- Cuenta principal: bautiarmanicode
+- CEO: 34U70 (Discord UID: 819724611737878550)
+- Canal: #estudios-reporter (Discord server del CEO)
+- Proyecto: Estudios DATA — Tecnicatura Ciencia de Datos UNCuyo
 
 ---
-*report_github.md — frog-estudio — Generado por estudios-reporter — 2026-05-15T03:04:00+08:00*
+
+*report_github.md — frog-estudio — Generado por estudios-reporter — 2026-05-15T03:30:00-03:00*
